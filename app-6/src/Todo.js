@@ -1,23 +1,21 @@
 import React from "react";
 
-export const Todo = () => {
-
-    const [task, settask] = useState('')
-    const [list, setlist] = useState('')
-
-  eventHandler = (event) => {
-      setlist ([...list {task: task}])
-
-  }
+export const Todo = (props) => {
 
   return (
-    <div className="Todo">
-      <div>
-        <h1>My To-Do List</h1>
-        <input type="text" />
-        <button type="submit" />
-        Add
-      </div>
-    </div>
+    <div>{props.task}</div>
+      
   );
 };
+
+
+
+// Class Component Solution
+
+// import React, {Component} from 'react';
+
+// export default class ToDo extends Component {
+//   render() {
+//     return <p>{this.props.task}</p>;
+//   }
+// }
